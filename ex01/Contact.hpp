@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 20:16:25 by oroy              #+#    #+#             */
-/*   Updated: 2023/12/15 20:27:11 by oroy             ###   ########.fr       */
+/*   Updated: 2023/12/19 19:11:34 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 class Contact
 {
 private:
-	/* data */
+
 public:
-	Contact(/* args */);
+	Contact(void);
 	~Contact(void);
 };
 
