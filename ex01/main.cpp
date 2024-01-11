@@ -6,17 +6,26 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 20:24:21 by oroy              #+#    #+#             */
-/*   Updated: 2024/01/10 16:02:58 by oroy             ###   ########.fr       */
+/*   Updated: 2024/01/11 17:52:46 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
+#include <iomanip>
 #include "Contact.hpp"
 #include "PhoneBook.hpp"
 
-static void	display_phonebook(void)
+static void	display_phonebook(std::string contacts[8][5])
 {
-	
+	std::cout << std::endl << "-----Index" << '|' << "-FirstName" << '|' << "--LastName" << '|' << "--NickName" << std::endl;
+	for (int i = 0; i < 8; i++)
+	{
+		std::cout << std::right << std::setw(10) << i << '|';
+		std::cout << std::right << std::setw(10) << contacts[i][0] << '|';
+		std::cout << std::right << std::setw(10) << contacts[i][1] << '|';
+		std::cout << std::right << std::setw(10) << contacts[i][2] << std::endl;
+	}
+	std::cout << std::endl;
 }
 
 static void	add_contact(std::string contact[5])
@@ -41,6 +50,7 @@ static void	add_contact(std::string contact[5])
 
 int	main(void)
 {
+	PhoneBook	myphonebook;
 	std::string	input;
 	std::string	contacts[8][5];
 	int			i;
@@ -57,7 +67,7 @@ int	main(void)
 				i = 0;
 		}
 		if (input == "SEARCH")
-			std::cout << "You entered: [" << input << "]" << std::endl;
+			display_phonebook(contacts);
 		if (input == "EXIT" || std::cin.eof())
 			break;
 	}

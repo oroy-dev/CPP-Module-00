@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 20:20:35 by oroy              #+#    #+#             */
-/*   Updated: 2024/01/10 14:08:05 by oroy             ###   ########.fr       */
+/*   Updated: 2024/01/11 17:50:55 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,12 @@ class PhoneBook
 private:
 
 public:
+
 	PhoneBook(void);
 	~PhoneBook(void);
+
+	void	add_contact(void);
+	
 };
 
 #endif

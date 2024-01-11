@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 20:19:23 by oroy              #+#    #+#             */
-/*   Updated: 2024/01/10 14:04:49 by oroy             ###   ########.fr       */
+/*   Updated: 2024/01/11 17:53:31 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,4 @@ Contact::~Contact(void)
 	std::cout << "Contact instance destroyed" << std::endl;
 	return;
 }
+
