@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 20:16:25 by oroy              #+#    #+#             */
-/*   Updated: 2024/01/11 20:49:53 by oroy             ###   ########.fr       */
+/*   Updated: 2024/01/12 16:56:06 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,15 @@ public:
 	Contact(void);
 	~Contact(void);
 	
-	void	get_info(void);
-	std::string	get_firstname(void);
-	std::string	get_lastname(void);
-	std::string	get_nickname(void);
+	std::string	get_firstname(void) const;
+	std::string	get_lastname(void) const;
+	std::string	get_nickname(void) const;
+	void		get_allinfo(void) const;
+	void		set_firstname(void);
+	void		set_lastname(void);
+	void		set_nickname(void);
+	void		set_phonenumber(void);
+	void		set_darkestsecret(void);
 
 };
 
