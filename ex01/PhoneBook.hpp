@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 20:20:35 by oroy              #+#    #+#             */
-/*   Updated: 2024/01/12 16:55:57 by oroy             ###   ########.fr       */
+/*   Updated: 2024/01/14 18:01:37 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,28 @@
 # define PHONEBOOK_H
 
 # include <iostream>
+# include <string>
+# include <sstream>
 # include "Contact.hpp"
+
+# define CONTACT_TOTAL 8
 
 class PhoneBook
 {
 private:
 
-public:
+	std::string	_get_substr(std::string const str) const;
 
-	Contact	contact[8];
+public:
 
 	PhoneBook(void);
 	~PhoneBook(void);
-
-	void	add_contact(Contact *contact);
-	void	display_contact(Contact *contact) const;
-	void	display_phonebook(Contact contact[8]) const;
+	
+	Contact		contact[CONTACT_TOTAL];
+	
+	void		add_contact(Contact *contact);
+	void		display_contact(Contact *contact) const;
+	void		display_phonebook(Contact contact[CONTACT_TOTAL]) const;
 
 };
 

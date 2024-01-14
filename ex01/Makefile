@@ -6,7 +6,7 @@
 #    By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/13 15:50:37 by oroy              #+#    #+#              #
-#    Updated: 2024/01/12 16:55:26 by oroy             ###   ########.fr        #
+#    Updated: 2024/01/14 18:23:37 by oroy             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,8 +44,6 @@ re: fclean all
 
 # VALGRIND ******************************************************************* #
 
-V_ARGS	:= "allo comment ca va"
-
 vleaks:
 	valgrind \
 	--leak-check=full \
@@ -53,4 +51,4 @@ vleaks:
 	--show-reachable=yes \
 	--show-possibly-lost=yes \
 	--track-origins=yes \
-	./$(NAME) $(V_ARGS)
+	./$(NAME)

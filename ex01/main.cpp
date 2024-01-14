@@ -6,14 +6,13 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 20:24:21 by oroy              #+#    #+#             */
-/*   Updated: 2024/01/12 17:00:33 by oroy             ###   ########.fr       */
+/*   Updated: 2024/01/14 18:24:50 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
 #include "PhoneBook.hpp"
 
-bool	is_number(const std::string s)
+bool	is_positivenumber(const std::string s)
 {
 	std::string::const_iterator	it;
 
@@ -28,13 +27,14 @@ int	main(void)
 	PhoneBook	myphonebook;
 	std::string	cmd;
 	std::string	idx;
+	int			num;
 	int			i;
 
 	i = 0;
 	while (1)
 	{
 		std::cout << "Please enter a command (ADD, SEARCH, EXIT): ";
-		std::cin >> cmd;
+		getline(std::cin, cmd);
 		if (cmd == "ADD")
 		{
 			myphonebook.add_contact(&myphonebook.contact[i]);
@@ -46,15 +46,22 @@ int	main(void)
 			myphonebook.display_phonebook(myphonebook.contact);
 			while (1)
 			{
-				std::cout << "Enter index to display: ";
-				std::cin >> idx;
-				if (is_number(idx))
-					break ;
+				std::cout << "Enter index to display (1 to " << CONTACT_TOTAL << "): ";
+				getline(std::cin, idx);
+				if (is_positivenumber(idx))
+				{
+					std::istringstream(idx) >> num;
+					if (num > 0 && num <= CONTACT_TOTAL)
+					{
+						myphonebook.display_contact(&myphonebook.contact[num - 1]);
+						break;
+					}
+				}	
+				std::cout << "[Incorrect value] ";
 			}
-			myphonebook.display_contact(&myphonebook.contact[std::stoi(idx)]);
 		}
 		else if (cmd == "EXIT" || std::cin.eof())
-			break ;
+			break;
 	}
 	return (0);
 }
