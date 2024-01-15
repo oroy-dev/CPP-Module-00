@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 20:19:23 by oroy              #+#    #+#             */
-/*   Updated: 2024/01/14 18:26:26 by oroy             ###   ########.fr       */
+/*   Updated: 2024/01/15 16:31:57 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,40 +51,70 @@ std::string	Contact::get_darkestsecret(void) const
 
 void	Contact::set_firstname(void)
 {
-	std::cout << "First Name: ";
-	getline (std::cin, this->_firstname);
-	if (std::cin.eof())
-		exit(0);
+	while (1)
+	{
+		std::cout << "First Name: ";
+		getline (std::cin, this->_firstname);
+		if (!this->_firstname.empty())
+			break ;
+		if (std::cin.eof())
+			exit(0);
+		std::cout << "[Field cannot be empty]: ";
+	}
 }
 
 void	Contact::set_lastname(void)
 {
-	std::cout << "Last Name: ";
-	getline (std::cin, this->_lastname);
-	if (std::cin.eof())
-		exit(0);
+	while (1)
+	{
+		std::cout << "Last Name: ";
+		getline (std::cin, this->_lastname);
+		if (!this->_lastname.empty())
+			break ;
+		if (std::cin.eof())
+			exit(0);
+		std::cout << "[Field cannot be empty]: ";
+	}
 }
 
 void	Contact::set_nickname(void)
 {
-	std::cout << "Nick Name: ";
-	getline (std::cin, this->_nickname);
-	if (std::cin.eof())
-		exit(0);
+	while (1)
+	{
+		std::cout << "Nick Name: ";
+		getline (std::cin, this->_nickname);
+		if (!this->_nickname.empty())
+			break ;
+		if (std::cin.eof())
+			exit(0);
+		std::cout << "[Field cannot be empty]: ";
+	}	
 }
 
 void	Contact::set_phonenumber(void)
 {
-	std::cout << "Phone Number: ";
-	getline (std::cin, this->_phonenumber);
-	if (std::cin.eof())
-		exit(0);
+	while (1)
+	{
+		std::cout << "Phone Number: ";
+		getline (std::cin, this->_phonenumber);
+		if (!this->_phonenumber.empty())
+			break ;
+		if (std::cin.eof())
+			exit(0);
+		std::cout << "[Field cannot be empty]: ";
+	}
 }
 
 void	Contact::set_darkestsecret(void)
 {
-	std::cout << "Darkest Secret: ";
-	getline (std::cin, this->_darkestsecret);
-	if (std::cin.eof())
-		exit(0);
+	while (1)
+	{
+		std::cout << "Darkest Secret: ";
+		getline (std::cin, this->_darkestsecret);
+		if (!this->_darkestsecret.empty())
+			break ;
+		if (std::cin.eof())
+			exit(0);
+		std::cout << "[Field cannot be empty]: ";
+	}
 }
