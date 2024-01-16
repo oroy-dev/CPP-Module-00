@@ -6,7 +6,7 @@
 #    By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/13 15:50:37 by oroy              #+#    #+#              #
-#    Updated: 2024/01/14 18:23:37 by oroy             ###   ########.fr        #
+#    Updated: 2024/01/15 17:51:59 by oroy             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRC		:= Contact.cpp PhoneBook.cpp main.cpp
 OBJ		:= $(patsubst %.cpp, $(OBJDIR)/%.o, $(SRC))
 
 CC		:= g++
-FLAGS	:= -Wall -Wextra -Werror -std=c++98 -pedantic
+FLAGS	:= -Wall -Wextra -Werror -std=c++98
 
 RM		:= rm -rf
 

@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 20:16:25 by oroy              #+#    #+#             */
-/*   Updated: 2024/01/14 18:00:47 by oroy             ###   ########.fr       */
+/*   Updated: 2024/01/15 19:05:25 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,11 @@ public:
 	std::string	get_phonenumber(void) const;
 	std::string	get_darkestsecret(void) const;
 	
-	void		set_firstname(void);
-	void		set_lastname(void);
-	void		set_nickname(void);
-	void		set_phonenumber(void);
-	void		set_darkestsecret(void);
+	bool		set_firstname(void);
+	bool		set_lastname(void);
+	bool		set_nickname(void);
+	bool		set_phonenumber(void);
+	bool		set_darkestsecret(void);
 
 };
 
