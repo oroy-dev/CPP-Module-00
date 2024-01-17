@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 20:24:21 by oroy              #+#    #+#             */
-/*   Updated: 2024/01/15 19:15:40 by oroy             ###   ########.fr       */
+/*   Updated: 2024/01/16 19:38:17 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int	main(void)
 	PhoneBook	myphonebook;
 	std::string	cmd;
 
-	myphonebook.contact_idx = 0;
 	while (1)
 	{
 		std::cout << "Please enter a command (ADD, SEARCH, EXIT): ";

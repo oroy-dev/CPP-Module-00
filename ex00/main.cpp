@@ -6,17 +6,15 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 16:35:24 by oroy              #+#    #+#             */
-/*   Updated: 2024/01/15 19:32:41 by oroy             ###   ########.fr       */
+/*   Updated: 2024/01/16 19:28:33 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
-#include <locale>
 
 int	main(int argc, char **argv)
 {
-	std::locale	loc;
 	std::string	str;
 
 	if (argc == 1)
@@ -28,7 +26,7 @@ int	main(int argc, char **argv)
 	{
 		str = argv[i];
 		for (std::string::size_type	j = 0; j < str.length(); j++)
-			std::cout << std::toupper(str[j], loc);
+			std::cout << static_cast<char>(std::toupper(str[j]));
 	}
 	std::cout << std::endl;
 	return (0);

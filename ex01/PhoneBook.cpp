@@ -6,21 +6,23 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 20:22:32 by oroy              #+#    #+#             */
-/*   Updated: 2024/01/15 19:16:55 by oroy             ###   ########.fr       */
+/*   Updated: 2024/01/16 19:28:33 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
+int	PhoneBook::_contact_idx = 0;
+
 PhoneBook::PhoneBook(void)
 {
-	std::cout << "PhoneBook instance created" << std::endl;
+	// std::cout << "PhoneBook instance created" << std::endl;
 	return ;
 }
 
 PhoneBook::~PhoneBook(void)
 {
-	std::cout << "PhoneBook instance destroyed" << std::endl;
+	// std::cout << "PhoneBook instance destroyed" << std::endl;
 	return ;
 }
 
@@ -45,14 +47,14 @@ std::string	PhoneBook::_get_substr(std::string const str) const
 bool	PhoneBook::add_contact(void)
 {
 	std::cout << std::endl;
-	if (!contact[contact_idx].set_firstname()
-		|| !contact[contact_idx].set_lastname()
-		|| !contact[contact_idx].set_nickname()
-		|| !contact[contact_idx].set_phonenumber()
-		|| !contact[contact_idx].set_darkestsecret())
+	if (!contact[_contact_idx].set_firstname()
+		|| !contact[_contact_idx].set_lastname()
+		|| !contact[_contact_idx].set_nickname()
+		|| !contact[_contact_idx].set_phonenumber()
+		|| !contact[_contact_idx].set_darkestsecret())
 		return (false);
 	std::cout << std::endl;
-	contact_idx = ++contact_idx % CONTACT_TOTAL;
+	_contact_idx = ++_contact_idx % CONTACT_TOTAL;
 	return (true);
 }
 
