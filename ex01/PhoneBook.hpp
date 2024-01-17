@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 20:20:35 by oroy              #+#    #+#             */
-/*   Updated: 2024/01/16 19:08:59 by oroy             ###   ########.fr       */
+/*   Updated: 2024/01/17 17:38:31 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ private:
 
 	bool		_is_positivenumber(std::string const str);
 	std::string	_get_substr(std::string const str) const;
-	
-	static int	_contact_idx;
 
 public:
 
@@ -36,6 +34,7 @@ public:
 	~PhoneBook(void);
 	
 	Contact		contact[CONTACT_TOTAL];
+	int			contact_idx;
 	
 	bool		add_contact(void);
 	bool		get_contact_by_index(void);

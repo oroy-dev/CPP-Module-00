@@ -6,17 +6,17 @@
 #    By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/13 15:50:37 by oroy              #+#    #+#              #
-#    Updated: 2024/01/16 18:03:00 by oroy             ###   ########.fr        #
+#    Updated: 2024/01/17 16:22:07 by oroy             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	:= megaphone
 
 OBJDIR	:= obj
-SRC		:= main.cpp
+SRC		:= megaphone.cpp
 OBJ		:= $(patsubst %.cpp, $(OBJDIR)/%.o, $(SRC))
 
-CC		:= g++
+CC		:= c++
 FLAGS	:= -Wall -Wextra -Werror -std=c++98
 
 RM		:= rm -rf

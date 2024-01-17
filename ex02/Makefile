@@ -6,7 +6,7 @@
 #    By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/13 15:50:37 by oroy              #+#    #+#              #
-#    Updated: 2024/01/16 17:25:37 by oroy             ###   ########.fr        #
+#    Updated: 2024/01/17 15:48:09 by oroy             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ OBJDIR	:= obj
 SRC		:= Account.cpp tests.cpp
 OBJ		:= $(patsubst %.cpp, $(OBJDIR)/%.o, $(SRC))
 
-CC		:= g++
+CC		:= c++
 FLAGS	:= -Wall -Wextra -Werror -std=c++98
 
 RM		:= rm -rf
