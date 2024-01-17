@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 20:22:32 by oroy              #+#    #+#             */
-/*   Updated: 2024/01/17 17:42:57 by oroy             ###   ########.fr       */
+/*   Updated: 2024/01/17 18:19:41 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,7 @@ std::string	PhoneBook::_get_substr(std::string const str) const
 bool	PhoneBook::add_contact(void)
 {
 	std::cout << std::endl;
-	if (!contact[contact_idx].set_firstname()
-		|| !contact[contact_idx].set_lastname()
-		|| !contact[contact_idx].set_nickname()
-		|| !contact[contact_idx].set_phonenumber()
-		|| !contact[contact_idx].set_darkestsecret())
+	if (!contact[contact_idx].set_contact())
 		return (false);
 	std::cout << std::endl;
 	contact_idx = ++contact_idx % CONTACT_TOTAL;

@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 20:19:23 by oroy              #+#    #+#             */
-/*   Updated: 2024/01/17 17:43:37 by oroy             ###   ########.fr       */
+/*   Updated: 2024/01/17 18:20:57 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,13 +49,13 @@ std::string	Contact::get_darkestsecret(void) const
 	return (_darkestsecret);
 }
 
-bool	Contact::set_firstname(void)
+bool	Contact::_set_field(std::string field, std::string *input)
 {
 	while (1)
 	{
-		std::cout << "First Name: ";
-		getline (std::cin, _firstname);
-		if (!_firstname.empty())
+		std::cout << field;
+		getline (std::cin, *input);
+		if (!input->empty())
 			break ;
 		if (std::cin.eof())
 			return (false);
@@ -64,62 +64,13 @@ bool	Contact::set_firstname(void)
 	return (true);
 }
 
-bool	Contact::set_lastname(void)
+bool	Contact::set_contact(void)
 {
-	while (1)
-	{
-		std::cout << "Last Name: ";
-		getline (std::cin, _lastname);
-		if (!_lastname.empty())
-			break ;
-		if (std::cin.eof())
-			return (false);
-		std::cout << "[Field cannot be empty]: ";
-	}
-	return (true);
-}
-
-bool	Contact::set_nickname(void)
-{
-	while (1)
-	{
-		std::cout << "Nick Name: ";
-		getline (std::cin, _nickname);
-		if (!_nickname.empty())
-			break ;
-		if (std::cin.eof())
-			return (false);
-		std::cout << "[Field cannot be empty]: ";
-	}
-	return (true);
-}
-
-bool	Contact::set_phonenumber(void)
-{
-	while (1)
-	{
-		std::cout << "Phone Number: ";
-		getline (std::cin, _phonenumber);
-		if (!_phonenumber.empty())
-			break ;
-		if (std::cin.eof())
-			return (false);
-		std::cout << "[Field cannot be empty]: ";
-	}
-	return (true);
-}
-
-bool	Contact::set_darkestsecret(void)
-{
-	while (1)
-	{
-		std::cout << "Darkest Secret: ";
-		getline (std::cin, _darkestsecret);
-		if (!_darkestsecret.empty())
-			break ;
-		if (std::cin.eof())
-			return (false);
-		std::cout << "[Field cannot be empty]: ";
-	}
+	if (!_set_field("First Name: ", &_firstname)
+		|| !_set_field("Last Name: ", &_lastname)
+		|| !_set_field("Nick Name: ", &_nickname)
+		|| !_set_field("Phone Number: ", &_phonenumber)
+		|| !_set_field("Darkest Secret: ", &_darkestsecret))
+		return (false);
 	return (true);
 }
